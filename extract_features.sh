@@ -44,7 +44,7 @@ bedtools complement -i genes_sorted.gff -g genome.bed |sed 's/Chr//' > targets.b
 bedtools getfasta -fi Arabidopsis_thaliana.TAIR10.dna.toplevel.fa -bed targets.bed > intergenic.fasta
 
 ## extract introns 
-sort -k1,1 -k4n,4n CDS_UTRs_primary.gff > CDS_UTRs_primary_sorted.gff. ## CDS
+sort -k1,1 -k4n,4n CDS_UTRs_primary.gff > CDS_UTRs_primary_sorted.gff ## CDS
 bedtools complement -i CDS_UTRs_primary_sorted.gff -g genome.bed > targets.bed ## regions not in CDS
 bedtools intersect -a targets.bed -b genes_sorted.gff |sed 's/Chr//' > introns.bed ## intersect regions not in CDS and within genes (introns)
 bedtools getfasta -fi Arabidopsis_thaliana.TAIR10.dna.toplevel.fa -bed introns.bed > introns.fasta

@@ -2,7 +2,7 @@
 Quick and dirty pipeline to extra genomic features from *Arabidopsis thaliana* genome. Easily adaptable to other genomes given genome assembly and .gff annotation.
 
 ## Scripts
-### gff_to_fasta.sh
+### extract_features.sh
 Downloads *A. thaliana* genome and annotation, produces fasta files containing CDS, 5' UTRs, 3' UTRs, intergenic seqs, promoters, and introns.
 
 ### keep_prim_annot.py
